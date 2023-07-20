@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acquista Biglietto Treno</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" refer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- form -->
+        <section>
+
+            <form>
+                <input type="text" id="userName" name="name">
+                <input type="number" id="userDistance" name="distance" min="1" max="5000">
+                <select name="age" id="userAge">
+                    <option value="minor">Minorenne</option>
+                    <option value="adult">Maggiorenne</option>
+                    <option value="over65">Over 65</option>
+                  </select>
+                  <input type="submit" value="Genera">
+            </form>
+
+        </section>
+
+        <!-- ticket print -->
+        <section>
+
+            <table>
+                <thead>
+                  <tr>
+                    <th>Nome passeggero</th>
+                    <th>Età</th>
+                    <th>Offerta</th>
+                    <th>Distanza</th>
+                    <th>Prezzo totale</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Marco</td>
+                    <td>21</td>
+                    <td>Maggiorenne</td>
+                    <td>394</td>
+                    <td>10000000 euri</td>
+                  </tr>
+                </tbody>
+                </table>
+
+        </section>
+    </div>
+</body>
+
+</html>
