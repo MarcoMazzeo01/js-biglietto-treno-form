@@ -5,15 +5,16 @@ let basePrice;
 let finalPrice;
 
 const ticketRate = 0.21;
-const minAge = 18, minPromo = 20;
-const maxAge = 65, maxPromo = 40;
+const minPromo = 20;
+const maxPromo = 40;
 
 const ticketForm = document.getElementById("ticketForm")
 
 
-
+//main
 ticketForm.addEventListener("submit", function(event) {
 
+    //impedisce alla pagina di ricaricare dopo submit
     event.preventDefault()
 
     //prendo i dati necessari
@@ -26,7 +27,6 @@ ticketForm.addEventListener("submit", function(event) {
 
         //calcolo prezzo base senza applicare sconti
         basePrice = userDistance * ticketRate;
-    
 
         //applico sconto in base all'età
         if (userAge == "Minorenne") {
@@ -54,11 +54,6 @@ ticketForm.addEventListener("submit", function(event) {
         //ricarica la pagina, svuotando il form e la tabella biglietto
         location.reload(true)
     }
-
-
-    
-
-
 
 
 })
