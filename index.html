@@ -6,49 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acquista Biglietto Treno</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/main.js" defer></script>
 </head>
 
 <body>
     <div class="container">
+        <h1>Acquista Biglietto Treno</h1>
+
         <!-- form -->
-        <section>
+        <section class="form">
 
             <form id="ticketForm">
-                <input type="text" id="userName" name="name">
-                <input type="number" id="userDistance" name="distance" min="1" max="5000">
-                <select name="age" id="userAge">
-                    <option value="Minorenne">Minorenne</option>
-                    <option value="Adulto">Maggiorenne</option>
-                    <option value="Over 65">Over 65</option>
-                  </select>
-                  <input type="submit" id="generateTicket" value="Genera">
+                <div class="ticketForm__fields">
+                    <div>
+                        <label for="userName">Nome & Cognome</label>
+                        <input type="text" id="userName" name="name">
+                    </div>
+                    <div>
+                        <label for="userDistance">Distanza da percorrere (km)</label>
+                        <input type="number" id="userDistance" name="distance" min="1" max="5000">
+                    </div>
+                    <div>
+                        <label for="userAge">Età</label>
+                        <select name="age" id="userAge">
+                            <option value="Minorenne">Minorenne</option>
+                            <option value="Adulto">Maggiorenne</option>
+                            <option value="Over 65">Over 65</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="submit" id="generateTicket" value="Genera">
+                </div>
             </form>
 
         </section>
 
         <!-- ticket print -->
-        <section>
+        <section class="ticket">
 
             <table>
                 <thead>
-                  <tr>
-                    <th>Nome passeggero</th>
-                    <th>Offerta</th>
-                    <th>Distanza</th>
-                    <th>Prezzo totale</th>
-                  </tr>
+                    <tr>
+                        <th>Nome passeggero</th>
+                        <th>Offerta</th>
+                        <th>Distanza</th>
+                        <th>Prezzo totale</th>
+                    </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td id="ticket_userName"></td>
-                    <td id="ticket_userAge"></td>
-                    <td id="ticket_userDistance"></td>
-                    <td id="ticket_finalPrice"></td>
-                  </tr>
+                    <tr>
+                        <td id="ticket_userName"></td>
+                        <td id="ticket_userAge"></td>
+                        <td id="ticket_userDistance"></td>
+                        <td id="ticket_finalPrice"></td>
+                    </tr>
                 </tbody>
-                </table>
+            </table>
 
         </section>
     </div>

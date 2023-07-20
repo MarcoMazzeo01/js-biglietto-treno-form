@@ -1,0 +1,57 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body > .container { 
+    width: 80%;
+    margin: 0  auto;
+}
+
+.container > h1 {
+    text-align: center;
+}
+
+.form, .ticket {
+    padding: 10px 20px;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+
+/* * FORM SECTION * */
+.form {
+    margin: 50px 0;
+    text-align: center;
+
+
+}
+
+.ticketForm__fields {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.ticketForm__fields > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/* * TICKET SECTION * */
+
+.ticket > table td + td, table th + th { 
+    border-left: 1px solid black; 
+}
+
+.ticket > table {
+   width: 100%;
+   border-collapse: collapse;
+   text-align: center
+}
+
+.ticket > table th:first-child, table td:first-child, table th:last-child, table td:last-child {
+    background-color: rgba(0,0,0,0.2);
+}
