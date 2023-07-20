@@ -51,6 +51,8 @@ ticketForm.addEventListener("submit", function(event) {
 
     } else {
         alert("Inserire una distanza valida!")
+        //ricarica la pagina, svuotando il form e la tabella biglietto
+        location.reload(true)
     }
 
 
